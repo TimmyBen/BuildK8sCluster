@@ -28,6 +28,8 @@ sudo systemctl restart containerd
 
 sudo swapoff -a
 
+sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+
 sudo apt-get update && sudo apt-get install -y apt-transport-https curl
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
