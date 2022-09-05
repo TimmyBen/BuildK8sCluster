@@ -45,7 +45,7 @@ sudo apt-get install -y kubelet=1.23.0-00 kubeadm=1.23.0-00 kubectl=1.23.0-00
 sudo apt-mark hold kubelet kubeadm kubectl
 
 #Control Plane Only
-sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.23.0
+sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.23.0 --node-name primary
 
 mkdir -p $HOME/.kube
 
